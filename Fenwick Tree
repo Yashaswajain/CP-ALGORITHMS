@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+void updateBIT(vector<ll>&BIT,ll index,ll val,ll n){
+    index=index+1;
+    while(index<=n){
+        BIT[index]+=val;
+        index=index+(index&(-index));
+    }
+}
+ll getSum(vector<ll>BIT,ll index,ll n){
+    index=index+1;
+    ll sum=0;
+    while(index>1){
+        sum+=BIT[index];
+        index=index-(index&(-index));
+    }
+    return sum;
+}
+int main()
+{ll n,q,x;
+cin>>n>>q;
+vector<ll>vec,BIT(n+1,0);
+
+}
