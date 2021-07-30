@@ -1,0 +1,17 @@
+ll find(ll arr[],ll val){
+    if(arr[val]==-1){
+        return val;
+    }
+    return find(arr,arr[val]);
+}
+void union(ll arr[],ll a,ll b){
+    arr[a]=b;
+}
+//To detect a cycle in a directed graph
+
+
+for(edges){
+    ll x=find(edges[i][0]),y=find(edges[i][1]);
+    if(x==y){return 1;}
+    union(arr,edges[i][0],edges[i][1]);
+}
