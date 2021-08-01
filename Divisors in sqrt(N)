@@ -1,0 +1,11 @@
+set<long>arr;
+for(long i=1;i*i<=n;i++){
+    if(n%i==0){
+        arr.insert(i);
+    }
+}
+for(long i=sqrt(n);i>=1;i--){
+    if(n%i==0){
+        arr.insert(n/i);
+    }
+}
